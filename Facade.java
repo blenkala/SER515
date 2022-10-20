@@ -33,9 +33,17 @@ public class Facade {
 			   MeatProductMenu mp=new MeatProductMenu();
 		       mp.showMenu();
 		   }
-		   else{
+		   else if(selectedMenu.equals("2")){
 			   ProduceProductMenu pp=new ProduceProductMenu();
 			   pp.showMenu();
+		   }
+		   else if(selectedMenu.equals("3")){
+			   System.out.println("Enter the type: 1 for Meat and 2 for Produce ");
+			   String ptype=sc.next();
+			   System.out.println("Enter the product name:");
+               String pname=sc.next();
+			   Product pr=new Product();
+			   pr.addProduct(ptype,pname);
 		   }
 	   }
 	   else

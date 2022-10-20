@@ -7,3 +7,4 @@ public class MainTrading {
         obj.beginFacade();
     }
 }
+
