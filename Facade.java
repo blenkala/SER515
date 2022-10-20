@@ -1,4 +1,5 @@
 import java.io.IOException;
+import java.util.Scanner;
 
 public class Facade {
 
@@ -13,12 +14,18 @@ public class Facade {
 	private Person thePerson;
 
 	public void beginFacade() throws IOException
-	{
-
+	{  Scanner sc=new Scanner(System.in);
+	   System.out.println("Enter Username");
+	   String uname=sc.next();
+	   System.out.println("Enter password");
+	   String password=sc.next();
+	   boolean result=login(uname,password);
+		System.out.println(uname+" "+password);
 	}
 
-	public boolean login() {
-
+	public boolean login(String uname,String password) throws IOException {
+     loginForValidation obj=new loginForValidation();
+	 boolean res=obj.validate(uname,password);
 		return false;
 	}
 
