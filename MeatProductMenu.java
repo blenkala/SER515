@@ -2,6 +2,7 @@ import java.io.*;
 public class MeatProductMenu implements ProductMenu {
 
 	public void showMenu() throws IOException {
+		System.out.println("BRIDGE initialized successfully!!");
 		File file = new File(
 					"/Users/bhavanilenkala/SER515/composition_diagram/SER515-xyz/Database/ProductInfo.txt");
 		BufferedReader br = new BufferedReader(new FileReader(file));

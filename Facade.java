@@ -18,32 +18,35 @@ public class Facade {
 
 	public void beginFacade() throws IOException
 	{  Scanner sc=new Scanner(System.in);
-	   System.out.println("Are you a seller or buyer?Enter 0 for Buyer and 1 for seller");
+	   System.out.println("FACADE initialised successfully!!");
+	   System.out.println("Hii! Do you want to login as a Buyer or Seller? Enter 0 for buyer and 1 for seller.");
 	   String sellerOrBuyer= sc.next();
-	   System.out.println("Enter Username");
+	   System.out.println("Enter the Username");
 	   String uname=sc.next();
-	   System.out.println("Enter password");
+	   System.out.println("Enter the password");
 	   String password=sc.next();
 	   boolean result=login(sellerOrBuyer,uname,password);
 	   if(result == true){
-		   System.out.println("Authentication successful!!");
-		   System.out.println("What do you want to see: \n Enter 1 for MeatProductMenu: \n  Enter 2 for ProduceProductMenu: \n Enter 3 to add products");
-		   String selectedMenu = sc.next();
-		   if(selectedMenu.equals("1")) {
-			   MeatProductMenu mp=new MeatProductMenu();
-		       mp.showMenu();
-		   }
-		   else if(selectedMenu.equals("2")){
-			   ProduceProductMenu pp=new ProduceProductMenu();
-			   pp.showMenu();
-		   }
-		   else if(selectedMenu.equals("3")){
-			   System.out.println("Enter the type: 1 for Meat and 2 for Produce ");
-			   String ptype=sc.next();
-			   System.out.println("Enter the product name:");
-               String pname=sc.next();
-			   Product pr=new Product();
-			   pr.addProduct(ptype,pname);
+		   System.out.print("You are successfully logged in as a ");
+		   if(sellerOrBuyer.equals("0"))
+			   System.out.println("BUYER!!!");
+		   else
+			   System.out.println("SELLER!!!");
+		   String selectedMenu="0";
+		   while(!selectedMenu.equals("E")) {
+			   System.out.println("What do you want to see: \nEnter 1 to display ProductMenu of Meat: \nEnter 2 to display ProductMenu of Produce: \nEnter 3 to purchase products: \nEnter 4 to add products to Menu: \nEnter E to EXIT");
+			   selectedMenu = sc.next();
+			   if (selectedMenu.equals("1") || selectedMenu.equals("2")) {
+				   ProductIterator pi = new ProductIterator();
+				   pi.iterateThroughMenu(selectedMenu);
+			   } else if (selectedMenu.equals("4")) {
+				   System.out.println("Enter the type: 1 for Meat and 2 for Produce ");
+				   String ptype = sc.next();
+				   System.out.println("Enter the product name:");
+				   String pname = sc.next();
+				   Product pr = new Product();
+				   pr.addProduct(ptype, pname);
+			   }
 		   }
 	   }
 	   else
