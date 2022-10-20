@@ -1,3 +1,5 @@
+import java.io.IOException;
+
 public class Facade {
 
 	private int userType;
@@ -10,7 +12,13 @@ public class Facade {
 
 	private Person thePerson;
 
+	public void beginFacade() throws IOException
+	{
+
+	}
+
 	public boolean login() {
+
 		return false;
 	}
 
