@@ -18,7 +18,6 @@ public class ProductIterator {
 	}
 
 	public boolean hasNext(String uname) throws FileNotFoundException {
-		System.out.println("ITERATOR initialized successfully!!");
 		File file = new File(
 				"UserProduct.txt");
                Scanner scm=new Scanner(file);

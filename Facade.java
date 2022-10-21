@@ -18,7 +18,6 @@ public class Facade {
 
 	public void beginFacade() throws IOException
 	{  Scanner sc=new Scanner(System.in);
-	   System.out.println("FACADE initialised successfully!!");
 	   System.out.println("Hii! Do you want to login as a Buyer or Seller? Enter 0 for buyer and 1 for seller.");
 	   String sellerOrBuyer= sc.next();
 	   System.out.println("Enter the Username");
@@ -32,9 +31,9 @@ public class Facade {
 			   System.out.println("BUYER!!!");
 		   else
 			   System.out.println("SELLER!!!");
+		   System.out.println("FACADE initialised successfully!!");
 		   String selectedMenu="0";
-		   while(!selectedMenu.equals("E")) {
-			   System.out.println("What do you want to see: \nEnter 1 to display ProductMenu of Meat: \nEnter 2 to display ProductMenu of Produce: \nEnter 3 to view your associated items: \nEnter 4 to add products to Menu: \nEnter 5 to select item for trading:  \nEnter E to EXIT");
+			   System.out.println("What do you want to see: \nEnter 1 to display ProductMenu of Meat: \nEnter 2 to display ProductMenu of Produce: \nEnter 3 to view your associated items: \nEnter 4 to add products to Menu: \nEnter 5 to select item from the above list for trading:  \nEnter E to EXIT");
 			   selectedMenu = sc.next();
 			   if (selectedMenu.equals("1") || selectedMenu.equals("2")) {
 				   ProductIterator pi = new ProductIterator();
@@ -59,10 +58,10 @@ public class Facade {
 			   else{
 				   System.out.println("Incorrect input!");
 			   }
-		   }
 	   }
-	   else
+	   else{
 		   System.out.println("Authentication failed!!");
+		   System.out.println("FACADE initialised successfully!!");}
 	}
 
 	public boolean login(String sellerOrBuyer,String uname,String password) throws IOException {
