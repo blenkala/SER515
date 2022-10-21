@@ -34,18 +34,30 @@ public class Facade {
 			   System.out.println("SELLER!!!");
 		   String selectedMenu="0";
 		   while(!selectedMenu.equals("E")) {
-			   System.out.println("What do you want to see: \nEnter 1 to display ProductMenu of Meat: \nEnter 2 to display ProductMenu of Produce: \nEnter 3 to purchase products: \nEnter 4 to add products to Menu: \nEnter E to EXIT");
+			   System.out.println("What do you want to see: \nEnter 1 to display ProductMenu of Meat: \nEnter 2 to display ProductMenu of Produce: \nEnter 3 to view your associated items: \nEnter 4 to add products to Menu: \nEnter 5 to select item for trading:  \nEnter E to EXIT");
 			   selectedMenu = sc.next();
 			   if (selectedMenu.equals("1") || selectedMenu.equals("2")) {
 				   ProductIterator pi = new ProductIterator();
 				   pi.iterateThroughMenu(selectedMenu);
-			   } else if (selectedMenu.equals("4")) {
+			   } else if(selectedMenu.equals("3")){
+				   UserInfoItem uft=new UserInfoItem();
+				   uft.getUserInfoItem(uname);
+			   } else if(selectedMenu.equals("4")) {
 				   System.out.println("Enter the type: 1 for Meat and 2 for Produce ");
 				   String ptype = sc.next();
 				   System.out.println("Enter the product name:");
 				   String pname = sc.next();
 				   Product pr = new Product();
 				   pr.addProduct(ptype, pname);
+			   }
+			   else if(selectedMenu.equals("5")){
+				   System.out.println("Select the product for bidding:");
+				   String bidval = sc.next();
+				   Trading trObj=new Trading();
+				   trObj.getBiddingDetails(bidval);
+			   }
+			   else{
+				   System.out.println("Incorrect input!");
 			   }
 		   }
 	   }

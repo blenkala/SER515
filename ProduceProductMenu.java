@@ -2,6 +2,7 @@ import java.io.*;
 public class ProduceProductMenu implements ProductMenu {
 
 	public void showMenu() throws IOException {
+		System.out.println("BRIDGE initialized successfully!!");
 		File file = new File(
 				"ProductInfo.txt");
 		BufferedReader br = new BufferedReader(new FileReader(file));
@@ -14,6 +15,7 @@ public class ProduceProductMenu implements ProductMenu {
 			if(dbProduceName.equals("Produce"))
 				System.out.println("Produce:" + dbProduceValue);
 		}
+		System.out.println("FACTORY initialized successfully!!");
 	}
 
 	public void showAddButton() {

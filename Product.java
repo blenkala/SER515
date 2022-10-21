@@ -14,6 +14,6 @@ public class Product {
              else
              bw.write("\n"+"Produce"+":"+pName);
              bw.close();
-             System.out.println("Done");
+             System.out.println("Successfully added to ProductInfo.txt");
          }
 }

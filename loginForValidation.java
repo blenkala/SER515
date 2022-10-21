@@ -5,11 +5,11 @@ public class loginForValidation {
         File file;
         if(sellerOrBuyer.equals("0")) {
              file = new File(
-                    "/Users/bhavanilenkala/SER515/composition_diagram/SER515-xyz/Database/BuyerInfo.txt");
+                    "BuyerInfo.txt");
         }
         else{
              file = new File(
-                    "/Users/bhavanilenkala/SER515/composition_diagram/SER515-xyz/Database/SellerInfo.txt");
+                    "SellerInfo.txt");
         }
         br = new BufferedReader(new FileReader(file));
         String val;

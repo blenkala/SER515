@@ -14,7 +14,9 @@ public class MeatProductMenu implements ProductMenu {
 			String dbMeatValue=arrOfStr[1];
 			if(dbMeatName.equals("Meat"))
 				System.out.println("Meat:" + dbMeatValue);
-	}}
+	}
+		System.out.println("FACTORY initialized successfully!!");
+	}
 
 	public void showAddButton() {
 
