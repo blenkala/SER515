@@ -1,0 +1,9 @@
+Meat:Beef
+Meat:chicken
+Meat:Tuna
+Produce:Tomato
+Produce:Onion
+Meat:fish
+Meat:gyu
+Meat:gun
+Meat:tyu
