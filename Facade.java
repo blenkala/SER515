@@ -33,7 +33,7 @@ public class Facade {
 			   System.out.println("SELLER!!!");
 		   System.out.println("FACADE initialised successfully!!");
 		   String selectedMenu="0";
-			   System.out.println("What do you want to see: \nEnter 1 to display ProductMenu of Meat: \nEnter 2 to display ProductMenu of Produce: \nEnter 3 to view your associated items: \nEnter 4 to add products to Menu: \nEnter 5 to select item from the above list for trading:  \nEnter E to EXIT");
+			   System.out.println("What do you want to see: \nEnter 1 to display ProductMenu of Meat: \nEnter 2 to display ProductMenu of Produce: \nEnter 3 to view your associated items: \nEnter 4 to add products to Menu: \nEnter 5 to select item from the above list for trading:  ");
 			   selectedMenu = sc.next();
 			   if (selectedMenu.equals("1") || selectedMenu.equals("2")) {
 				   ProductIterator pi = new ProductIterator();

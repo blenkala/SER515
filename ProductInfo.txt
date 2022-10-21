@@ -6,3 +6,4 @@ Produce:Onion
 Meat:fish
 Meat:gyu
 Meat:gun
+Meat:tyu
