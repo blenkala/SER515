@@ -3,7 +3,7 @@ public class ProduceProductMenu implements ProductMenu {
 
 	public void showMenu() throws IOException {
 		File file = new File(
-				"/Users/bhavanilenkala/SER515/composition_diagram/SER515-xyz/Database/ProductInfo.txt");
+				"ProductInfo.txt");
 		BufferedReader br = new BufferedReader(new FileReader(file));
 		String val;
 		System.out.println("The ProduceProductMenu is:");
